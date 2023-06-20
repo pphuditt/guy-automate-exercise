@@ -1,19 +1,16 @@
-const Page = require('../page-objects/Page.js')
 const HomePage = require('../page-objects/HomePage.js')
 const SignUpPage = require('../page-objects/SignUpPage.js')
 const RegisterPage = require('../page-objects/RegisterPage.js')
-const ContactUsPage = require('../page-objects/ContactUsPage.js')
 
 describe('Test case 2: Login user with correct email and password', () => {
 
     beforeEach(() => {
-        // Page.navigateToURL('http://automationexercise.com')
         cy.fixture('data.json').as('data')
     });
   
     it('Create account', function() {
       // Before login we need to register account
-      Page.navigateToURL('/')
+      HomePage.navigateToURL('/')
       HomePage.clickLoginButton()
       SignUpPage.fillName(this.data.Name)
       SignUpPage.fillEmail(this.data.Email)
@@ -48,8 +45,8 @@ describe('Test case 2: Login user with correct email and password', () => {
     
     it('Login with valid user and password whole process', function() {
         // No. 2-3
-        Page.navigateToURL('/')
-        Page.webLoadSuccessfully()
+        HomePage.navigateToURL('/')
+        HomePage.webLoadSuccessfully()
         // No. 4-5
         HomePage.clickLoginButton()
         HomePage.verifyLogintoYourAccount()

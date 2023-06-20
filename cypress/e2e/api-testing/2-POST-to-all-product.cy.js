@@ -1,18 +1,18 @@
 describe('API 2: POST To All Products List', () => {
 
-    const data = {
-        id: 44,
-    }
     
     it('Post to all products list', () => {
         cy.request({
-            method: "POST",
-            url: "https://automationexercise.com/api/productsList",
-            body: data
-        }).then((data) => {
-            expect(JSON.parse(data).responseCode).to.eq(200)
-            expect(JSON.parse(data).products.id).to.eq(33)
-      })
+            method: 'POST',
+            url: Cypress.config().baseUrl+'api/productsList',
+            headers: { 'Content-Type': 'application/json' },
+            form: true,
+            body: { search_product: 'jean' },
+           }).as('searchProduct')
 
+           cy.get('@searchProduct').its('body').then(res => {
+            let data = JSON.parse(res)
+            expect(data.responseCode).to.equal(405)
+           })
     });
 });

@@ -1,12 +1,11 @@
-const Page = require('../page-objects/Page.js')
 const HomePage = require('../page-objects/HomePage.js')
 const AllProductPage = require('../page-objects/AllProductPage.js');
 
 describe('Test Case 19: View & Cart Brand Products', () => {
     it('verify brand', () => {
         // No. 2
-        Page.navigateToURL('/')
-        Page.webLoadSuccessfully()
+        HomePage.navigateToURL('/')
+        HomePage.webLoadSuccessfully()
 
         // No.3
         HomePage.clickProductButton()

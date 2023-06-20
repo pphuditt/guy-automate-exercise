@@ -1,4 +1,3 @@
-const Page = require('../page-objects/Page.js')
 const HomePage = require('../page-objects/HomePage.js')
 const CartPage = require('../page-objects/CartPage.js')
 const AllProductPage = require('../page-objects/AllProductPage.js');
@@ -8,12 +7,12 @@ describe('Test Case 12: Add Products in Cart', () => {
     
     it('adding first product to cart', () => {
          // No. 2-3
-         Page.navigateToURL('/')
-         Page.webLoadSuccessfully()
+         HomePage.navigateToURL('/')
+         HomePage.webLoadSuccessfully()
 
          // No. 4
         HomePage.clickProductButton()
-        Page.isNavigateToAllProductPage()
+        HomePage.isNavigateTo('products')
 
         // No. 5
         AllProductPage.clickAddFirstProductToCartButton()

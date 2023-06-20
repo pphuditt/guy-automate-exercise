@@ -1,4 +1,3 @@
-const Page = require('../page-objects/Page.js')
 const HomePage = require('../page-objects/HomePage.js')
 const RegisterPage = require('../page-objects/RegisterPage.js')
 const SignUpPage = require('../page-objects/SignUpPage.js')
@@ -14,7 +13,7 @@ describe('Test Case 16: Place Order: Login before Checkout', () => {
     });
 
     it('register in case does not have account', function() {
-        Page.navigateToURL('/')
+        HomePage.navigateToURL('/')
         HomePage.clickLoginButton()
         SignUpPage.fillName(this.data.Name)
         SignUpPage.fillEmail(this.data.Email)
@@ -47,8 +46,8 @@ describe('Test Case 16: Place Order: Login before Checkout', () => {
 
     it('login then checkout', function()  {
         // No. 2-3
-        Page.navigateToURL('http://automationexercise.com')
-        Page.webLoadSuccessfully()
+        HomePage.navigateToURL('/')
+        HomePage.webLoadSuccessfully()
 
         // No. 4
         HomePage.clickLoginButton()
@@ -65,7 +64,7 @@ describe('Test Case 16: Place Order: Login before Checkout', () => {
         // No.8
         AllProductPage.clickViewCart()
         // No.9
-        Page.isNavigateToCart()
+        HomePage.isNavigateTo('view_cart')
 
         // No.10
         CartPage.clickCheckOut()

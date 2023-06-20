@@ -2,7 +2,6 @@ const AllProductPage = require('../page-objects/AllProductPage');
 const CartPage = require('../page-objects/CartPage');
 const CheckOutPage = require('../page-objects/CheckOutPage');
 const HomePage = require('../page-objects/HomePage');
-const Page = require('../page-objects/Page');
 const PaymentPage = require('../page-objects/PaymentPage');
 const RegisterPage = require('../page-objects/RegisterPage');
 const SignUpPage = require('../page-objects/SignUpPage');
@@ -14,8 +13,8 @@ describe('Test Case 24: Download Invoice after purchase order', () => {
 
     it('download invoice', function()  {
         // No. 2-3
-        Page.navigateToURL('/')
-        Page.webLoadSuccessfully()
+        HomePage.navigateToURL('/')
+        HomePage.webLoadSuccessfully()
 
         // No.4
         AllProductPage.clickAddFirstProductToCartButton()
@@ -25,7 +24,7 @@ describe('Test Case 24: Download Invoice after purchase order', () => {
         HomePage.clickCartIcon()
 
         // No.6
-        Page.isNavigateToCart()
+        HomePage.isNavigateTo('view_cart')
 
         // No.7
         CartPage.clickCheckOut()

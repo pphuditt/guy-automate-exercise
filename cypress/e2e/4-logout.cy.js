@@ -1,4 +1,3 @@
-const Page = require('../page-objects/Page.js')
 const HomePage = require('../page-objects/HomePage.js')
 const SignUpPage = require('../page-objects/SignUpPage.js')
 const RegisterPage = require('../page-objects/RegisterPage.js')
@@ -10,8 +9,8 @@ describe('Test Case 4: Logout User', () => {
   
     it('login and then logout', function()  {
       // No. 2-3
-      Page.navigateToURL('/')
-      Page.webLoadSuccessfully()
+      HomePage.navigateToURL('/')
+      HomePage.webLoadSuccessfully()
       // No. 4-5
       HomePage.clickLoginButton()
       HomePage.verifyLogintoYourAccount()
@@ -24,7 +23,7 @@ describe('Test Case 4: Logout User', () => {
       //No. 9
       HomePage.clickLogOutButton()
       // No.10
-      Page.isNavigateToLoginPage()
+      HomePage.isNavigateTo('login')
   
     });
   

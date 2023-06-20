@@ -1,4 +1,3 @@
-const Page = require('../page-objects/Page.js')
 const HomePage = require('../page-objects/HomePage.js')
 
 describe('Test Case 10: Verify Subscription in home page', () => {
@@ -8,8 +7,8 @@ describe('Test Case 10: Verify Subscription in home page', () => {
 
     it('verifying subscription', function()  {
         // No. 2-3
-        Page.navigateToURL('/')
-        Page.webLoadSuccessfully()
+        HomePage.navigateToURL('/')
+        HomePage.webLoadSuccessfully()
         
         // No. 4
         HomePage.scrollToFooter()

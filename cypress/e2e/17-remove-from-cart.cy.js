@@ -1,12 +1,12 @@
-const Page = require('../page-objects/Page.js')
 const CartPage = require('../page-objects/CartPage.js')
 const AllProductPage = require('../page-objects/AllProductPage.js');
+const HomePage = require('../page-objects/HomePage.js');
 
 describe('Test Case 17: Remove Products From Cart', () => {
     it('add product and then remove', () => {
         // No. 2-3
-        Page.navigateToURL('/')
-        Page.webLoadSuccessfully()
+        HomePage.navigateToURL('/')
+        HomePage.webLoadSuccessfully()
 
         // No.4
         AllProductPage.clickAddFirstProductToCartButton()
@@ -15,7 +15,7 @@ describe('Test Case 17: Remove Products From Cart', () => {
         AllProductPage.clickViewCart()
 
         // No.6
-        Page.isNavigateToCart()
+        HomePage.isNavigateTo('view_cart')
 
         // No.7
         CartPage.clickRemoveProduct()

@@ -1,4 +1,3 @@
-const Page = require('../page-objects/Page.js')
 const HomePage = require('../page-objects/HomePage.js')
 const AllProductPage = require('../page-objects/AllProductPage.js')
 
@@ -10,14 +9,14 @@ describe('Test Case 9: Search Product', () => {
     
     it('test product searching', function() {
         // No. 2-3
-        Page.navigateToURL('/')
-        Page.webLoadSuccessfully()
+        HomePage.navigateToURL('/')
+        HomePage.webLoadSuccessfully()
 
         // No. 4
         HomePage.clickProductButton()
 
         // No. 5
-        Page.isNavigateToAllProductPage()
+        HomePage.isNavigateTo('products')
 
         // No. 6
         AllProductPage.fillSearchBar(this.data.ProductName)

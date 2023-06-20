@@ -2,7 +2,7 @@ describe('API 1: Get All Products List', () => {
     it('Get all products list', () => {
         cy.request({
             method: "GET",
-            url: "https://automationexercise.com/api/productsList"
+            url: Cypress.config().baseUrl+"api/productsList"
         }).as('res')
 
         // get status code

@@ -1,4 +1,3 @@
-const Page = require('../page-objects/Page.js')
 const HomePage = require('../page-objects/HomePage.js')
 const SignUpPage = require('../page-objects/SignUpPage.js')
 const RegisterPage = require('../page-objects/RegisterPage.js')
@@ -11,7 +10,7 @@ describe('Test Case 3: Login User with incorrect email and password', () => {
   
     it('Create account', function() {
       // Before login we need to register account
-      Page.navigateToURL('/')
+      HomePage.navigateToURL('/')
       HomePage.clickLoginButton()
       SignUpPage.fillName(this.data.Name)
       SignUpPage.fillEmail(this.data.Email)
@@ -46,8 +45,8 @@ describe('Test Case 3: Login User with incorrect email and password', () => {
   
     it('Login with invalid username', function() {
       // No. 2-3
-      Page.navigateToURL('/')
-      Page.webLoadSuccessfully()
+      HomePage.navigateToURL('/')
+      HomePage.webLoadSuccessfully()
       // No. 4-5
       HomePage.clickLoginButton()
       HomePage.verifyLogintoYourAccount()
@@ -62,8 +61,8 @@ describe('Test Case 3: Login User with incorrect email and password', () => {
   
     it('Login with invalid password', function() {
       // No. 2-3
-      Page.navigateToURL('/')
-      Page.webLoadSuccessfully()
+      HomePage.navigateToURL('/')
+      HomePage.webLoadSuccessfully()
       // No. 4-5
       HomePage.clickLoginButton()
       HomePage.verifyLogintoYourAccount()

@@ -1,8 +1,5 @@
-const Page = require('../page-objects/Page.js')
 const HomePage = require('../page-objects/HomePage.js')
 const SignUpPage = require('../page-objects/SignUpPage.js')
-const RegisterPage = require('../page-objects/RegisterPage.js')
-const ContactUsPage = require('../page-objects/ContactUsPage.js')
 
 describe('Test Case 5: Register User with existing email', () => {
     beforeEach(() => {
@@ -11,8 +8,8 @@ describe('Test Case 5: Register User with existing email', () => {
   
     it('sign up with already existed email', function()  {
       // No. 2-3
-      Page.navigateToURL('/')
-      Page.webLoadSuccessfully()
+      HomePage.navigateToURL('/')
+      HomePage.webLoadSuccessfully()
   
       // No. 4-5
       HomePage.clickLoginButton()

@@ -1,4 +1,3 @@
-const Page = require('../page-objects/Page.js')
 const HomePage = require('../page-objects/HomePage.js')
 const RegisterPage = require('../page-objects/RegisterPage.js')
 const SignUpPage = require('../page-objects/SignUpPage.js')
@@ -14,8 +13,8 @@ describe('Test Case 14: Place Order: Register while Checkout', () => {
 
     it('register while checkout', function() {
          // No. 2-3
-        Page.navigateToURL('/')
-        Page.webLoadSuccessfully()
+        HomePage.navigateToURL('/')
+        HomePage.webLoadSuccessfully()
 
         //No. 4 Add product to cart
         AllProductPage.clickAddFirstProductToCartButton()
@@ -24,7 +23,7 @@ describe('Test Case 14: Place Order: Register while Checkout', () => {
         AllProductPage.clickViewCart()
 
         // No. 6 View cart page display
-        Page.isNavigateToCart()
+        HomePage.isNavigateTo('view_cart')
 
         // No.7
         CartPage.clickCheckOut()

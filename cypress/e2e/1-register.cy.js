@@ -1,4 +1,3 @@
-const Page = require('../page-objects/Page.js')
 const HomePage = require('../page-objects/HomePage.js')
 const SignUpPage = require('../page-objects/SignUpPage.js')
 const RegisterPage = require('../page-objects/RegisterPage.js')
@@ -11,8 +10,8 @@ describe('Test case 1: Register User', () => {
 
     //No.2-3
     it('registering user', function() {
-      Page.navigateToURL('/')
-      Page.webLoadSuccessfully()
+      HomePage.navigateToURL('/')
+      HomePage.webLoadSuccessfully()
 
       // No.4-5
       HomePage.clickLoginButton()

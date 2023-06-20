@@ -1,4 +1,3 @@
-const Page = require('../page-objects/Page.js')
 const HomePage = require('../page-objects/HomePage.js')
 const ContactUsPage = require('../page-objects/ContactUsPage.js')
 
@@ -10,8 +9,8 @@ describe('Test Case 6: Contact Us Form', () => {
 
   it('Test on contact us filling form', function()  {
     // No. 2-3
-    Page.navigateToURL('/')
-    Page.webLoadSuccessfully()
+    HomePage.navigateToURL('/')
+    HomePage.webLoadSuccessfully()
 
     // No. 4-5
     HomePage.clickContactUs()
@@ -39,7 +38,7 @@ describe('Test Case 6: Contact Us Form', () => {
     // No. 10 - 11
     ContactUsPage.isSuccessTextVisible()
     ContactUsPage.clickHomeButtton()
-    Page.isNavigateToHomePage()
+    HomePage.isNavigateToHomePage()
 
 
   });

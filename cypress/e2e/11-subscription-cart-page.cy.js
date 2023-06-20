@@ -1,4 +1,3 @@
-const Page = require('../page-objects/Page.js')
 const HomePage = require('../page-objects/HomePage.js')
 
 describe('Test Case 11: Verify Subscription in Cart page', () => {
@@ -8,8 +7,8 @@ describe('Test Case 11: Verify Subscription in Cart page', () => {
     });
     it('verify in cart page', function() {
        // No. 2-3
-       Page.navigateToURL('/')
-       Page.webLoadSuccessfully()
+       HomePage.navigateToURL('/')
+       HomePage.webLoadSuccessfully()
        
        // No. 4-5
        HomePage.clickCartIcon()

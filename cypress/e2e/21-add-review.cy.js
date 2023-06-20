@@ -1,4 +1,3 @@
-const Page = require('../page-objects/Page')
 const HomePage = require("../page-objects/HomePage");
 const AllProductPage = require('../page-objects/AllProductPage');
 const ProductDetailPage = require('../page-objects/ProductDetailPage');
@@ -12,14 +11,14 @@ describe('Test Case 21: Add review on product', () => {
 
     it('write review', function()  {
         // No. 2
-        Page.navigateToURL('/')
-        Page.webLoadSuccessfully()
+        HomePage.navigateToURL('/')
+        HomePage.webLoadSuccessfully()
 
         // No.3
         HomePage.clickProductButton()
 
         // No.4
-        Page.isNavigateToAllProductPage()
+        HomePage.isNavigateTo('products')
 
         // No.5
         AllProductPage.clickOnFirstViewProduct()

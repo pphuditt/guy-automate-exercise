@@ -1,4 +1,3 @@
-const Page = require('../page-objects/Page.js')
 const HomePage = require('../page-objects/HomePage.js')
 const AllProductPage = require('../page-objects/AllProductPage.js')
 const ProductDetailPage = require('../page-objects/ProductDetailPage.js');
@@ -8,17 +7,17 @@ describe('Test Case 13: Verify Product quantity in Cart', () => {
     
     it('Increase quantity of adding product', () => {
          // No. 2-3
-         Page.navigateToURL('/')
-         Page.webLoadSuccessfully()
+         HomePage.navigateToURL('/')
+         HomePage.webLoadSuccessfully()
  
          // No. 4
          HomePage.clickProductButton()
  
          // No. 5
-         Page.isNavigateToAllProductPage()
+         HomePage.isNavigateTo('products')
          AllProductPage.isProductListVisible()
          AllProductPage.clickOnFirstViewProduct()
-         Page.isNavigateProductDetail()
+         HomePage.isNavigateTo('product_details/')
          ProductDetailPage.isProductDetailVisible()
 
          // No. 6

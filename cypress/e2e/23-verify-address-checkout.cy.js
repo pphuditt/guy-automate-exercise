@@ -1,5 +1,4 @@
 const HomePage = require('../page-objects/HomePage');
-const Page = require('../page-objects/Page');
 const SignUpPage = require('../page-objects/SignUpPage');
 const RegisterPage = require('../page-objects/RegisterPage');
 const AllProductPage = require('../page-objects/AllProductPage');
@@ -14,8 +13,8 @@ describe('Test Case 23: Verify address details in checkout page', () => {
 
     it('verify address', function()  {
         // No. 2-3
-        Page.navigateToURL('/')
-        Page.webLoadSuccessfully()
+        HomePage.navigateToURL('/')
+        HomePage.webLoadSuccessfully()
 
         // No.4
         HomePage.clickLoginButton()
@@ -61,7 +60,7 @@ describe('Test Case 23: Verify address details in checkout page', () => {
         HomePage.clickCartIcon()
 
         // No.10
-        CartPage.isNavigateToCart()
+        HomePage.isNavigateTo('view_cart')
         
         // No.11
         CartPage.clickCheckOut()

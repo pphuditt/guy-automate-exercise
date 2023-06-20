@@ -1,12 +1,12 @@
-const Page = require('../page-objects/Page.js')
 const AllProductPage = require('../page-objects/AllProductPage.js');
+const HomePage = require('../page-objects/HomePage.js');
 
 describe('Test Case 18: View Category Products', () => {
     
     it('verify view category', () => {
         // No. 2-3
-        Page.navigateToURL('/')
-        Page.webLoadSuccessfully()
+        HomePage.navigateToURL('/')
+        HomePage.webLoadSuccessfully()
 
         // No.4
         AllProductPage.isCategoryVisible()
