@@ -1,0 +1,37 @@
+{
+    "Name" : "guyguy",
+    "Email": "gautomatetest@gmail.com",
+    "InvalidEmail": "guyguy@gmail.com",
+    "InvalidPassword": "111111",
+
+    "Password": "123456",
+    "date": "3",
+    "month": "8",
+    "year": "2001",
+
+    "Firstname": "Phudit",
+    "Lastname": "Tanaworawarit",
+    "Company": "Playtorium Solutions",
+    "Address1": "349, SJ Infinite 1 Business Complex",
+    "Address2": "Vibhavadi Rangsit Rd, Chom Phon",
+    "Country": "Canada",
+    "State": "Bangkok",
+    "City": "Chatuchak",
+    "Zipcode" : "10900",
+    "MobileNo": "0912345678",
+
+    "Subject": "This is for testing",
+    "Message": "Hi, this message was for testing in cypress, incredible, isn't it?",
+
+    "ProductName": "Blue Top",
+    "Comment": "This comment for testing",
+
+    "NameOnCard": "GuyGuy",
+    "CardNo": "123456789",
+    "cvc": 999,
+    "ExpirationMonth": 8,
+    "ExpirationYear": 2030,
+
+    "SearchKeyword": "Top",
+    "ReviewText": "Your product is just for review :P"
+}
