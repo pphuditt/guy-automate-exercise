@@ -87,7 +87,7 @@ describe('Test Case 14: Place Order: Register while Checkout', () => {
         PaymentPage.clickPayButton()
 
         // No. 18
-        // PaymentPage.verifyPlaceOrderSuccess()
+        PaymentPage.verifyPlaceOrderSuccess()
         // No. 19
         RegisterPage.clickDeleteAccButton()
 

@@ -1,4 +1,5 @@
 const Page = require('./Page')
+const Path = require('path')
 
 class PaymentPage extends Page {
     static nameOnCard = '#payment-form > div:nth-child(2) > div > input'
@@ -9,6 +10,8 @@ class PaymentPage extends Page {
     static payButton = '#submit'
     static invoiceButton = '#form > div > div > div > a'
     static continueButton = '#form > div > div > div > div > a'
+
+    static placeOrderSuccessText = '#success_message'
 
     static fillNameOnCard(data) {
         cy.get(this.nameOnCard).type(data)
@@ -32,7 +35,8 @@ class PaymentPage extends Page {
     }
     
     static verifyPlaceOrderSuccess() {
-        cy.get(this.placeOrderSuccess).should('contain.text' ,'Your order has been placed successfully!' )
+        cy.get(this.placeOrderSuccessText).should('be.visible')
+        cy.get(this.placeOrderSuccessText).should('contain.text' ,'Your order has been placed successfully!' )
     }
 
     static clickDownloadInvoice() {
@@ -40,7 +44,7 @@ class PaymentPage extends Page {
     }
 
     static verifyInvoiceDownload() {
-        cy.verifyDownload('Guy-automation-exercise/cypress/downloads/invoice.txt')
+        cy.verifyDownload(Path.join(process.cwd(), 'cypress', 'downloads', 'invoice.txt'))
     }
 
     static clickContinueButton() {
