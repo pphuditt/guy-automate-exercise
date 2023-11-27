@@ -12,7 +12,8 @@ describe('API 2: POST To All Products List', () => {
 			.its('body')
 			.then(res => {
 				let data = JSON.parse(res)
-				expect(data.JSON.res).to.equal(405)
+				expect(data.responseCode).to.equal(405)
+				expect(data.message).to.equal('This request method is not supported.')
 			})
 	})
 })

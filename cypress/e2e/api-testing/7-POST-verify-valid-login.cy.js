@@ -15,6 +15,7 @@ describe('API 7: POST To Verify Login with valid details', () => {
 			.then(res => {
 				let data = JSON.parse(res)
 				expect(data.responseCode).to.equal(200)
+				expect(data.message).to.equal('User exists!')
 			})
 	})
 })

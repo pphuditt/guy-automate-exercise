@@ -29,6 +29,9 @@ describe('API 17: POST To Create/Register User Account with missing field', () =
 			.then(res => {
 				let data = JSON.parse(res)
 				expect(data.responseCode).to.equal(400)
+				expect(data.message).to.equal(
+					'Bad request, mobile_number parameter is missing in POST request.'
+				)
 			})
 	})
 })

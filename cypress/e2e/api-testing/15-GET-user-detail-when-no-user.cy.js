@@ -15,6 +15,9 @@ describe('API 15: GET user account detail by email but no user account', () => {
 			.then(res => {
 				let data = JSON.parse(res)
 				expect(data.responseCode).to.equal(404)
+				expect(data.message).to.equal(
+					'Account not found with this email, try another email!'
+				)
 			})
 	})
 })

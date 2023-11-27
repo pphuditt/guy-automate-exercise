@@ -31,6 +31,7 @@ describe('API 11: POST To Create/Register User Account', () => {
 			.then(res => {
 				let data = JSON.parse(res)
 				expect(data.responseCode).to.equal(201)
+				expect(data.message).to.equal('User created!')
 			})
 	})
 })

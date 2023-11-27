@@ -13,6 +13,7 @@ describe('API 16: DELETE METHOD To Delete User Account but no user account', () 
 			.then(res => {
 				let data = JSON.parse(res)
 				expect(data.responseCode).to.equal(404)
+				expect(data.message).to.equal('Account not found!')
 			})
 	})
 })
